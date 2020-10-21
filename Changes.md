@@ -12,3 +12,6 @@ Enjoyed the course and you can find many more Moodle courses at: https://www.moo
 Richard Jones
 Pirongia, NZ
 October 2020
+
+Richard is a freelance Moodle admin, course designer and plugin developer.
+See more: https://richardnz.net/
