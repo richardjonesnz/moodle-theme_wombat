@@ -1,0 +1,67 @@
+{{!
+    @template theme_wombat/full_header
+
+    This template renders the header.
+
+    Example context (json):
+    {
+        "contextheader": "context_header_html",
+        "settingsmenu": "settings_html",
+        "hasnavbar": false,
+        "navbar": "navbar_if_available",
+        "courseheader": "course_header_html",
+        "timeofday": "Good morning",
+        "firstname": "Admin",
+        "loggedinduration": ", you have been logged in for 0h 15m and 45s."
+    }
+}}
+<header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card {{^contextheader}}border-0 bg-transparent{{/contextheader}}">
+            <div class="card-body {{^contextheader}}p-2{{/contextheader}}">
+                <div class="d-sm-flex align-items-center">
+                    {{#contextheader}}
+                    <div class="mr-auto">
+                        {{{contextheader}}}
+                    </div>
+                    {{/contextheader}}
+
+                    {{#settingsmenu}}
+                    <div class="context-header-settings-menu">
+                        {{{settingsmenu}}}
+                    </div>
+                    {{/settingsmenu}}
+                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                        {{#headeractions}}
+                            <div class="header-action ml-2">{{{.}}}</div>
+                        {{/headeractions}}
+                    </div>
+                </div>
+                <div class="mr-auto">
+                    <h3>{{timeofday}} {{firstname}}{{loggedinduration}}</h3>
+                </div>
+                <div class="d-flex flex-wrap">
+                    {{#hasnavbar}}
+                    <div id="page-navbar">
+                        {{{navbar}}}
+                    </div>
+                    {{/hasnavbar}}
+                    <div class="ml-auto d-flex">
+                        {{{pageheadingbutton}}}
+                    </div>
+                    <div id="course-header">
+                        {{{courseheader}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{{#js}}
+require(['jquery', 'core/log'], function($, log) {
+    log.debug('Wombat Header JS');
+    $(document).ready(function($) {
+        log.debug('Launching....');
+    });
+});
+{{/js}}

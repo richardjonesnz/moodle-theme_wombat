@@ -1,0 +1,7 @@
+/* Additional css for rounded corners */
+#region-main,
+.card,
+img {
+    border-color: #fab;
+    border-radius: 25px;
+}

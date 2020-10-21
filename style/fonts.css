@@ -1,0 +1,34 @@
+/* Custom fonts for theme wombat */
+
+@font-face {
+    font-family: 'opensans-bold';
+    font-style: normal;
+    src: url([[font:theme|OpenSans-Bold.ttf]]) format('truetype');
+}
+
+@font-face {
+    font-family: 'rubik-bold';
+    font-style: normal;
+    src: url([[font:theme|Rubik-Bold.ttf]]) format('truetype');
+}
+
+/* Set the heading and body fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'rubik-bold';
+    font-style: normal;
+    font-weight: normal;
+    font-size: larger;
+    font-stretch: extra-expanded;
+}
+
+body {
+    font-family: 'opensans-bold';
+    font-style: normal;
+    font-weight: normal;
+    font-size: larger;
+}

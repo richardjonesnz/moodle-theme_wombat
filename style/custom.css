@@ -1,0 +1,8 @@
+/* Custom CSS - Add here.
+-------------------------*/
+body:not(.format-site) .page-context-header .page-header-headings h1 {
+
+    font-size:[[setting:titlesize]]px;
+}
+
+[[setting:customcss]]
